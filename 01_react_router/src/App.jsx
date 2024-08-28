@@ -4,6 +4,8 @@ import { About } from "./pages/About";
 import { Contact } from "./pages/Contact";
 import { Movie } from "./pages/Movie";
 import AppLayout from "./components/UI/layout/AppLayout";
+
+import "../src/App.css";
 // by control space child component will import automatic
 
 const App = () => {

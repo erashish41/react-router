@@ -17,7 +17,7 @@
             - Header.jsx
             - Footer.jsx
 
-- App.jsx: this is the method to show the data on web page
+- App.jsx: this is the new method to show the data on web page
  const router = createBrowserRouter([
     {
       path: "/",
@@ -35,3 +35,13 @@
     routes within a parent route. 
 - It allows for the nesting of routes, enabling developers to create complex navigation structures 
     in their applications.
+
+- Navbar
+- A navbar is a crucial element of any website, as it provides users with a means to navigate 
+    through different pages and sections.
+- It serves as a navigation aid, providing links or buttons that allow users to access 
+    different sections or pages within the website.
+- React allows for the creation of reusable and modular components, making it an excellent 
+    choice for building complex UIs like navbars.
+- Accessibility should be a top priority when creating a navbar, ensuring that all users, 
+    including those with disabilities, can effectively navigate your website.
