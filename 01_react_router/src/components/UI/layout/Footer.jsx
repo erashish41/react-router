@@ -18,23 +18,18 @@ export const Footer = () => {
             <a href="#">Accessories</a>
             <a href="#">Sales & Discount</a>
           </div>
+
           <div className="content_3">
             <h4>Experience</h4>
             <a href="./contact.html">Contact Us</a>
-            <a href="" target="_blank">
-              Payment Method
-            </a>
-            <a href="" target="_blank">
-              Delivery
-            </a>
-            <a href="" target="_blank">
-              Return and Exchange
-            </a>
+            <a href="" target="_blank">Payment Method</a>
+            <a href="" target="_blank">Delivery</a>
+            <a href="" target="_blank">Return and Exchange</a>
           </div>
+          
           <div className="content_4">
             <h4>NEWSLETTER</h4>
-            <p>
-              Be the first to know about new
+            <p>Be the first to know about new
               <br />
               arrivals, sales & promos!
             </p>
@@ -44,10 +39,12 @@ export const Footer = () => {
             </div>
             <hr />
           </div>
+
         </div>
+
         <div className="f-design">
           <div className="f-design-txt">
-            <p>Design and Code by Thapa Technical</p>
+            <p>Design and Code by Netflix Technical Team</p>
           </div>
         </div>
       </footer>
