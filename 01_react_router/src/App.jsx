@@ -3,10 +3,11 @@ import { Home } from "./pages/Home";
 import { About } from "./pages/About";
 import { Contact } from "./pages/Contact";
 import { Movie } from "./pages/Movie";
-import AppLayout from "./components/UI/layout/AppLayout";
+import AppLayout from "./components/layout/AppLayout";
 
 import "../src/App.css";
 import { ErrorPage } from "./pages/ErrorPage";
+import { getMovieData } from "./api/GetAPIData";
 // by control space child component will import automatic
 
 const App = () => {
@@ -41,7 +42,8 @@ const App = () => {
           },
           {
             path: "/movie",
-            element: <Movie />
+            element: <Movie />,
+            loader: getMovieData,
           },
           {
             path: "/contact",

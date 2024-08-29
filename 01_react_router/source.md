@@ -74,7 +74,7 @@
 - Relative Paths ("about"): Take you to a path relative to your current location, which might 
     not always be what you intend.
 
--useRouteError: 
+-useRouteError Hook
 - This hook allows you to access the current error state of the router.
 - Inside of an errorElement, this hook returns anything thrown during an action, loader, or rendering.
 - Bubbling: When a route does not have an errorElement, errors will bubble up through parent routes.
@@ -82,5 +82,21 @@
      bubble up and be handled by a default errorElement which will print the error message and 
     stack trace. 
 
--useNavigate:
+-useNavigate Hook
 - This hook returns a function that lets you navigate programmatically.
+- To navigate back to previous pages we will use the React useNavigation Hook. 
+- We will pass a numerical value to navigation and switch back to the previous page inside 
+    the navigate, instance of the useNavigate hook, as a prop and call it when the defined 
+    button is clicked.
+- It's a replacement for the useHistory and useLocation hooks in previous versions of React Router
+
+-API Fetch
+- a. Fetch function is made getMovieData
+- b. passing the function name as the value of loader property in that page route 
+        {
+            path: "/movie",
+            element: <Movie />,
+            loader: getMovieData,
+          },
+- c. get the data of API by using the useLoaderData();
+- d. create Card.jsx in UI 
