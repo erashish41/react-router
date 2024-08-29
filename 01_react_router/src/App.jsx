@@ -6,6 +6,7 @@ import { Movie } from "./pages/Movie";
 import AppLayout from "./components/UI/layout/AppLayout";
 
 import "../src/App.css";
+import { ErrorPage } from "./pages/ErrorPage";
 // by control space child component will import automatic
 
 const App = () => {
@@ -27,6 +28,7 @@ const App = () => {
     {
       path: "/",
       element: <AppLayout />,
+      errorElement: <ErrorPage />,  // we have to give this to get the error page display
       children: [                 // all the children component are wrap in children 
         
           {
