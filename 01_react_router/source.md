@@ -15,8 +15,12 @@
 
     - layout
         - AppLayout.jsx
-            - Header.jsx
-            - Footer.jsx
+        - Header.jsx
+        - Footer.jsx
+        - Loading.jsx
+
+3.api
+    -GetAPIData.jsx
 
 -App.jsx: this is the new method to show the data on web page
  const router = createBrowserRouter([
@@ -100,3 +104,35 @@
           },
 - c. get the data of API by using the useLoaderData();
 - d. create Card.jsx in UI 
+
+-useNavigation Hook
+- This hook tells you everything you need to know about a page navigation to build pending 
+    navigation indicators and optimistic UI on data mutations. 
+- Things like:
+    -Global loading indicators
+    -Disabling forms while a mutation is happening
+    -Adding busy indicators to submit buttons
+    -Optimistically showing a new record while it's being created on the server
+    -Optimistically showing the new state of a record while it's being updated
+
+- navigation.state
+a. idle - There is no navigation pending.
+b. submitting - A route action is being called due to a form submission using POST, PUT, PATCH,
+     or DELETE
+c. loading - The loaders for the next routes are being called to render the next page
+
+- Normal navigations and GET form submissions transition through these states:
+                    idle → loading → idle
+- Form submissions with POST, PUT, PATCH, or DELETE transition through these states:
+                    idle → submitting → loading → idle
+
+- navigation steps
+1. go to AppLayout.jsx
+ - define loading state in it 
+                            const navigation = useNavigation();
+                            console.log(navigation);
+
+                                if(navigation.state === "loading"){
+                                return <Loading />
+                            }
+- now make Loading.jsx file in layout component, so that to get the data from it
