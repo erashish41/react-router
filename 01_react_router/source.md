@@ -8,6 +8,7 @@
     - About.jsx
     - Movie.jsx
     - Contact.jsx
+    - ErrorPage.jsx
 
 2.components
     - UI
@@ -17,7 +18,7 @@
             - Header.jsx
             - Footer.jsx
 
-- App.jsx: this is the new method to show the data on web page
+-App.jsx: this is the new method to show the data on web page
  const router = createBrowserRouter([
     {
       path: "/",
@@ -25,9 +26,26 @@
       children: [  ]               // all the children component are wrap in children 
     }
  ]);
-        
 
-- In AppLayout.jsx, <Outlet /> is provided btw Header and Footer bcz to get the data 
+-createBrowserRouter
+- First, you create a router using createBrowserRouter. The router object holds all the routes 
+    and their associated components.
+- It replaces the older method of using BrowserRouter with nested Route components. 
+- This is the recommended router for all React Router web projects. It uses the DOM History
+     API to update the URL and manage the history stack.
+- It also enables the v6.4 data APIs like loaders, actions, fetchers and more.
+- The RouterProvider component is used to provide the router to your application. It takes the
+     router object created by createBrowserRouter as a prop.
+- RouterProvider is then used to provide this router object to your React component tree.
+- It wraps your entire app (or the part of your app that needs routing), enabling the routing 
+    system to work.
+- Inside the RouterProvider, the router takes care of matching the current URL to the 
+    appropriate route and rendering the corresponding component.
+- RouterProvider is the core component that connects your routing configuration to your 
+    React application.
+
+-In AppLayout.jsx, 
+- <Outlet /> is provided btw Header and Footer bcz to get the data 
 - the <Outlet> component is used to render nested routes. 
 - It's a placeholder that tells React Router where to render the child routes within a 
     parent route component.
@@ -50,9 +68,19 @@
 - A <NavLink> is a special kind of <Link> that knows whether or not it is "active", "pending", 
     or "transitioning". This is useful in a few different scenarios
 
-- useRouteError: This hook allows you to access the current error state of the router.
+-Absolute Paths vs. Relative Paths
+- Absolute Paths ("/about"): Always take you to the same place, starting from the root of 
+    your application.
+- Relative Paths ("about"): Take you to a path relative to your current location, which might 
+    not always be what you intend.
+
+-useRouteError: 
+- This hook allows you to access the current error state of the router.
 - Inside of an errorElement, this hook returns anything thrown during an action, loader, or rendering.
 - Bubbling: When a route does not have an errorElement, errors will bubble up through parent routes.
 - If you do not provide an errorElement in your route tree to handle a given error, errors will
      bubble up and be handled by a default errorElement which will print the error message and 
     stack trace. 
+
+-useNavigate:
+- This hook returns a function that lets you navigate programmatically.

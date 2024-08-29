@@ -1,10 +1,19 @@
 //errorElement: <ErrorPage />,  
 //This errorElement is given in App.js to display the error.
-import { NavLink, useRouteError } from "react-router-dom";
+// useNavigate Hook 
+import { NavLink, useNavigate, useRouteError } from "react-router-dom";
 
 export const ErrorPage = () => {
-
+  
   const error = useRouteError();  
+
+  const navigate = useNavigate();
+
+  const handleGoBack = () => {
+    navigate( -1 );    
+  }
+  // -1 is used to get back on previous page
+
   if(error.status === 404){
   return (
     <section className="error-section">
@@ -22,6 +31,8 @@ export const ErrorPage = () => {
           <p className="p-b"> ... Back to previous page</p>
         </div>
       </div>
+
+      <button type="btn" onClick={handleGoBack}> Go Back </button>
 
       <NavLink to="/" className="btn">Go back to Home Page</NavLink>
     </section>

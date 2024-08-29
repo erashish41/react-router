@@ -17,8 +17,8 @@ export const Header = () => {
                             <p>Hello, get Netflix Membership for 30 days or refund guarantee</p>
                         </div>
                         <div className="sign_in_up">
-                            <NavLink to= "#">SIGN IN</NavLink>
-                            <NavLink to= "#">SIGN UP</NavLink>
+                            <NavLink to= "#">SIGN IN </NavLink>
+                            <NavLink to= "#"> SIGN UP</NavLink>
                         </div>
                     </div>
                 </section>
@@ -26,7 +26,7 @@ export const Header = () => {
                 <div className="container">
                     <div className="navbar-brand">
                         <NavLink to= "index">
-                            <p>User Flix</p>
+                            <p>User Flex</p>
                         </NavLink>
                     </div>
 
