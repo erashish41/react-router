@@ -103,6 +103,7 @@
             loader: getMovieData,
           },
 - c. get the data of API by using the useLoaderData();
+    - useLoaderData: This hook provides the value returned from your route loader.
 - d. create Card.jsx in UI 
 
 -useNavigation Hook
@@ -127,8 +128,8 @@ c. loading - The loaders for the next routes are being called to render the next
                     idle → submitting → loading → idle
 
 - navigation steps
-1. go to AppLayout.jsx
- - define loading state in it 
+    - go to AppLayout.jsx
+    - define loading state in it:
                             const navigation = useNavigation();
                             console.log(navigation);
 
