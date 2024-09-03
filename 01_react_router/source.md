@@ -12,6 +12,9 @@
 
 2.components
     - UI
+        - Card.jsx
+        - Card.css
+        - MovieDetails.jsx
 
     - layout
         - AppLayout.jsx
@@ -149,3 +152,32 @@ c. loading - The loaders for the next routes are being called to render the next
 - Naming convention: Prefix your environment variables with REACT_APP_.
 - Access in code: Access environment variables in your React components using
      process.env.REACT_APP_YOUR_VARIABLE_NAME.
+
+
+-Dynamic routing
+- Dynamic routing is a powerful technique used in web development to handle navigation and
+     rendering of pages based on changing parameters
+- With dynamic routing, you're not limited by a fixed set of routes.
+- Instead, you can create new routes as needed, modify existing ones, or even delete routes 
+    that are no longer required. 
+- This makes your application more flexible and easier to maintain.
+- we have to make dynamic path in APP.jsx
+            {
+            path: "/movie/:movieID",
+            element: <MovieDetails />,
+          },
+- and make MovieDetails.jsx to fetch the data
+
+-useParams
+- useParams but not only params to fetch the data
+- React JS useParams Hook helps to access the parameters of the current route to manage the
+     dynamic routes in the URL.
+- useParams() will return the params object, which will refer to any dynamic part of the URL.
+- make GetMovieDetails.jsx in UI for params
+            {
+            path: "/movie/:movieID",
+            element: <MovieDetails />,
+            loader: getMovieDetails,
+          },
+
+The useLoaderData hook in React Router 6 is a powerful tool that allows you to fetch data for your routes and make it available to your components before they are rendered. This can be useful for a number of reasons, such as improving performance, preventing empty states, and providing a better user experience.

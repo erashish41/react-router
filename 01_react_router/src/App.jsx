@@ -8,6 +8,8 @@ import AppLayout from "./components/layout/AppLayout";
 import "../src/App.css";
 import { ErrorPage } from "./pages/ErrorPage";
 import { getMovieData } from "./api/GetAPIData";
+import { MovieDetails } from "./components/UI/MovieDetails";
+import { getMovieDetails } from "./api/GetMovieDetails";
 // by control space child component will import automatic
 
 const App = () => {
@@ -44,6 +46,11 @@ const App = () => {
             path: "/movie",
             element: <Movie />,
             loader: getMovieData,
+          },
+          {
+            path: "/movie/:movieID",
+            element: <MovieDetails />,
+            loader: getMovieDetails,
           },
           {
             path: "/contact",
