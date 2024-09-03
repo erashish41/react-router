@@ -116,7 +116,7 @@
     -Optimistically showing a new record while it's being created on the server
     -Optimistically showing the new state of a record while it's being updated
 
-- navigation.state
+-navigation.state
 a. idle - There is no navigation pending.
 b. submitting - A route action is being called due to a form submission using POST, PUT, PATCH,
      or DELETE
@@ -137,3 +137,15 @@ c. loading - The loaders for the next routes are being called to render the next
                                 return <Loading />
                             }
 - now make Loading.jsx file in layout component, so that to get the data from it
+
+-env (environment variables)
+- Store sensitive information like API keys, database credentials, and third-party service 
+    keys outside of your codebase.
+- Prevents accidental exposure of these secrets in version control systems like Git.
+
+-How to use environment variables in React:
+- Create React App: If you're using Create React App, you can simply create a .env file in the 
+    root of your project.
+- Naming convention: Prefix your environment variables with REACT_APP_.
+- Access in code: Access environment variables in your React components using
+     process.env.REACT_APP_YOUR_VARIABLE_NAME.
