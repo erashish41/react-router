@@ -180,4 +180,9 @@ c. loading - The loaders for the next routes are being called to render the next
             loader: getMovieDetails,
           },
 
-The useLoaderData hook in React Router 6 is a powerful tool that allows you to fetch data for your routes and make it available to your components before they are rendered. This can be useful for a number of reasons, such as improving performance, preventing empty states, and providing a better user experience.
+
+-useLoaderData() Hook
+- The useLoaderData hook allows you to fetch data for your routes and make it available to
+     your components before they are rendered. 
+- This can be useful for a number of reasons, such as improving performance, preventing empty 
+    states, and providing a better user experience.
