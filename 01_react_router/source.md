@@ -186,3 +186,7 @@ c. loading - The loaders for the next routes are being called to render the next
      your components before they are rendered. 
 - This can be useful for a number of reasons, such as improving performance, preventing empty 
     states, and providing a better user experience.
+
+-Handle Contact Form Data
+- We'll create new contacts by exporting an action in our root route, wiring it up to the 
+    route config, and changing our <form> to a React Router <Form>.
