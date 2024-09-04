@@ -190,3 +190,6 @@ c. loading - The loaders for the next routes are being called to render the next
 -Handle Contact Form Data
 - We'll create new contacts by exporting an action in our root route, wiring it up to the 
     route config, and changing our <form> to a React Router <Form>.
+
+-Home.jsx
+- Home page is updated get the updated home page
