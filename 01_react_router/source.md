@@ -193,3 +193,12 @@ c. loading - The loaders for the next routes are being called to render the next
 
 -Home.jsx
 - Home page is updated get the updated home page
+
+
+-Deployment and Production
+- Steps to deploy the project on website
+-Netlify
+- In Netlify every link should be secure(https) means it should be https not http (s should come).
+- After "bun run build" command it will make dist folder in app, now we can make dist folder to 
+    upload it anywhere to show live.
+    
